@@ -1,3 +1,0 @@
-api_key="YOUR KEY HERE"
-
-gkey="AIzaSyBejMXp63dhTDOZGR2c53lDM1CMW5jT7R4"
