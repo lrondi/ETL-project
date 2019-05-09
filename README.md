@@ -1,5 +1,5 @@
 # ETL-project: Deep sea corals database
-<img src=>
+!['coral'](https://deepseacoraldata.noaa.gov/images/Mushroom%20coral)
 
 The aim of this project was to gather data, transform it and load it into a database.
 We used Jupyter notebooks with Python to code, Pandas to analyze the data, BeautifulSoup for scraping, MySQL Workbench to load it onto a database and Gmpas library to visualize it.
@@ -35,8 +35,8 @@ We used Jupyter notebooks with Python to code, Pandas to analyze the data, Beaut
 - Some of the categories didn't give back any result on the API call, so we looked manually for those on Wikipedia.
 - We then set up the widgets for dropdown menus and gmaps visualization using this tutorial: https://towardsdatascience.com/bring-your-jupyter-notebook-to-life-with-interactive-widgets-bc12e03f0916. We set up two dropdown menus with the species names and the level of taxa to compare, so that when the map is plotted, we get markers for the localization of each record for that specific species, and a heatmap layer for the ocurrence of all the species that belong to the selected taxonomic level. 
 - For example, choosing <i>Aaptos apptos</i> as a species and "Order" as a taxonomic level to compare, would give us the following map, in which there's a marker for every record of <i>Aaptos aaptos</i> in the dataframe, and a heatmap for every record of the Order "Suberitida":
-<img src=>.
+<img src='https://github.com/lrondi/ETL-project/blob/master/Images/map.png'>.
 - We also added an info box for each marker that contains the information for that species in that locality: name of the species, latitude and longitud, depth at which it was found, name of the locality, and name and picture of the vernacular category to which it belongs:
-<img src=>
+<img src='https://github.com/lrondi/ETL-project/blob/master/Images/marker.png'>
 
 We had a lot of fun and learned a lot doing this project!
