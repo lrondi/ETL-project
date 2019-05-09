@@ -2,7 +2,7 @@
 !['coral'](https://deepseacoraldata.noaa.gov/images/Mushroom%20coral)
 
 The aim of this project was to gather data, transform it and load it into a database.
-We used Jupyter notebooks with Python to code, Pandas to analyze the data, BeautifulSoup for scraping, MySQL Workbench to load it onto a database and Gmpas library to visualize it.
+We used Jupyter notebooks with Python to code, Pandas to analyze the data, BeautifulSoup for scraping, MySQL Workbench to load it onto a database and Gmaps library to visualize it.
 
 <b>Data acquisition:</b></br>
 
