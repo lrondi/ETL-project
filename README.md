@@ -8,7 +8,7 @@ We used Jupyter notebooks with Python to code, Pandas to analyze the data, Beaut
 
 - We chose a csv file from kaggle.com (https://www.kaggle.com/noaa/deep-sea-corals) that consisted on records of more than 500,000 deep sea corals locations from the National Oceanic and Atmospheric Administration (NOAA: https://deepseacoraldata.noaa.gov/).
 - We complemented that information with taxonomy classification for each species from the World Register of Marine Species (WORM: http://www.marinespecies.org/index.php). WORMS gives taxanomic classification for each species via its scientific name or its AphiaID. The url for each species is composed of a fixed path plus the AphiaID of each species. Even though WORMS offers an API to get the taxonomy of each species, we wanted to scrape each website to practice this technique.
-- We used flickr API to look for pictures of different types of corals (https://www.flickr.com/services/api/ and https://www.flickr.com/services/api/flickr.photos.search.html).
+- We used Flickr's API to look for pictures of different types of corals (https://www.flickr.com/services/api/ and https://www.flickr.com/services/api/flickr.photos.search.html).
 
 
 <b>Transformation:</b></br>
