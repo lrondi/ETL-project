@@ -1,14 +1,14 @@
 # ETL-project: Deep sea corals database
-<img src=>
+!['coral'](https://deepseacoraldata.noaa.gov/images/Mushroom%20coral)
 
 The aim of this project was to gather data, transform it and load it into a database.
-We used Jupyter notebooks with Python to code, Pandas to analyze the data, BeautifulSoup for scraping, MySQL Workbench to load it onto a database and Gmpas library to visualize it.
+We used Jupyter notebooks with Python to code, Pandas to analyze the data, BeautifulSoup for scraping, MySQL Workbench to load it onto a database and Gmaps library to visualize it.
 
 <b>Data acquisition:</b></br>
 
 - We chose a csv file from kaggle.com (https://www.kaggle.com/noaa/deep-sea-corals) that consisted on records of more than 500,000 deep sea corals locations from the National Oceanic and Atmospheric Administration (NOAA: https://deepseacoraldata.noaa.gov/).
 - We complemented that information with taxonomy classification for each species from the World Register of Marine Species (WORM: http://www.marinespecies.org/index.php). WORMS gives taxanomic classification for each species via its scientific name or its AphiaID. The url for each species is composed of a fixed path plus the AphiaID of each species. Even though WORMS offers an API to get the taxonomy of each species, we wanted to scrape each website to practice this technique.
-- We used flickr API to look for pictures of different types of corals (https://www.flickr.com/services/api/ and https://www.flickr.com/services/api/flickr.photos.search.html).
+- We used Flickr's API to look for pictures of different types of corals (https://www.flickr.com/services/api/ and https://www.flickr.com/services/api/flickr.photos.search.html).
 
 
 <b>Transformation:</b></br>
@@ -31,12 +31,14 @@ We used Jupyter notebooks with Python to code, Pandas to analyze the data, Beaut
 <b>Visualization:</b></br>
 
 - We created a visualization widget on a Jupyter notebook using ipywidgets and gmaps libraries. The idea was to visualize the localization of all records of a specific species on the map, while also being able to visualize where its related species were located, selecting the level of relationship by choosing the taxonomic level to compare (same Kingdom, or Phyllum, or Oder, etc).
-- We used Flickr's API to look for photos of the vernacular categories of each species, because looking up pictures of each specific species wasn't possible. For this, we first made an API request looking up the tags of the pictures (i.e. 'stony+coral'). This gives us back the information to recreate the picture's url (as explained here: https://www.flickr.com/services/api/misc.urls.html). We limited the url's construction to 5 urls per category, because then we needed to manually visit each url to verify if the picture was correct/good.
+- We used Flickr's API to look for photos of the vernacular categories of each species, because looking up pictures of each specific species wasn't possible. For this, we first made an API request looking up the tags of the pictures (i.e. 'stony+coral'). This gaves us back the information to recreate the picture's url (as explained here: https://www.flickr.com/services/api/misc.urls.html). We limited the url's construction to 5 urls per category, because then we needed to manually visit each url to verify if the picture was correct/good.
 - Some of the categories didn't give back any result on the API call, so we looked manually for those on Wikipedia.
 - We then set up the widgets for dropdown menus and gmaps visualization using this tutorial: https://towardsdatascience.com/bring-your-jupyter-notebook-to-life-with-interactive-widgets-bc12e03f0916. We set up two dropdown menus with the species names and the level of taxa to compare, so that when the map is plotted, we get markers for the localization of each record for that specific species, and a heatmap layer for the ocurrence of all the species that belong to the selected taxonomic level. 
 - For example, choosing <i>Aaptos apptos</i> as a species and "Order" as a taxonomic level to compare, would give us the following map, in which there's a marker for every record of <i>Aaptos aaptos</i> in the dataframe, and a heatmap for every record of the Order "Suberitida":
-<img src=>.
+
+<img src='https://github.com/lrondi/ETL-project/blob/master/Images/map.png'>
+
 - We also added an info box for each marker that contains the information for that species in that locality: name of the species, latitude and longitud, depth at which it was found, name of the locality, and name and picture of the vernacular category to which it belongs:
-<img src=>
+<img src='https://github.com/lrondi/ETL-project/blob/master/Images/markers.png'>
 
 We had a lot of fun and learned a lot doing this project!
